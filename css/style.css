@@ -62,13 +62,6 @@ nav a{
   z-index: 1;
 }
 
-
-nav{
-  background-color: #ddd;
-  padding: 25px 0; 
-  text-align: left;
-}
-
 footer{
   background-color: black;
   color: white;
@@ -108,25 +101,84 @@ footer{
 /* Step 1: Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
 
-
+nav a:hover, nav a:focus {
+  text-decoration: underline;
+}
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
 
+.skip a{
+  position: absolute;
+  top: -40px;
+}
 
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-
+.skip a:focus {
+  position: absolute;
+  top: 20px;
+}
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
-
+:focus{
+  border-width: 2px;
+  border-style: solid;
+}
 
 
 /* Step 4: Write selector/rule property to style the container */
+@media (max-width: 9px){
 
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    row-gap: 15px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: green;
+    }
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
 
+.container > div{
+  grid-column: 1/span 3;
+  background-image: url('/images/header.jpg');
+  background-attachment: fixed;
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.overview{
+  grid-column: 1/span 3;
+  background-image: url('/images/header.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container > :nth-child(odd) {
+  grid-column: 1/span 3;
+}
+.about-image{
+  grid-column: 2/3;
+  background-color: aquamarine;
+}
+/* .about-image{
+  grid-column: 2/3;
+  
+} */
+}
 
+@media (min-width: 9px){
+  nav{
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: blue;
+  }
+
+}
 
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
