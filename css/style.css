@@ -62,7 +62,6 @@ nav a{
   z-index: 1;
 }
 
-
 nav{
   background-color: #ddd;
   padding: 25px 0; 
@@ -99,9 +98,6 @@ footer{
     background-attachment: initial;
   }
 }
-
-
-
 
 /*Your Code Here*/
 /* PLEASE DO NOT REMOVE MY COMMENTS.  THEY HELP US HELP YOU DEBUG. */
@@ -171,7 +167,7 @@ first div in the grid  and place it in the grid. */
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-  grid-column: 1/-1;
+  grid-column: 1/ span 3;
   max-height: 600px;
   overflow: hidden;
 }
